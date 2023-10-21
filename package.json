@@ -1,0 +1,92 @@
+{
+  "name": "cronyx-server",
+  "version": "0.0.0",
+  "description": "HTTP server for Cronyx, enabling seamless job scheduling across services via RESTful endpoints.",
+  "type": "module",
+  "module": "dist/index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "bin": {
+    "cronyx-server": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "bun --watch src/server.ts",
+    "format": "prettier **/*.{md,ts,cts,json} -w",
+    "format:check": "prettier **/*.{md,ts,cts,json} --check",
+    "lint": "eslint **/*.{ts,cts} --quiet",
+    "lint:fix": "eslint **/*.{ts,cts} --quiet --fix",
+    "prepare": "husky install",
+    "prepublishOnly": "tsc -p tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujiosaka/CronyxServer.git"
+  },
+  "keywords": [
+    "cron",
+    "crontab",
+    "cronjob",
+    "scheduler",
+    "job-scheduler",
+    "task-scheduler",
+    "mongodb",
+    "redis",
+    "mysql",
+    "postgres",
+    "bun",
+    "elysia"
+  ],
+  "author": "Yuji Isobe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yujiosaka/CronyxServer/issues"
+  },
+  "homepage": "https://github.com/yujiosaka/CronyxServer#readme",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@eelkevdbos/elysia-basic-auth": "^1.4.0",
+    "cronyx": "^2.4.1",
+    "debug": "^4.3.4",
+    "elysia": "^0.7.21",
+    "elysia-cronyx": "^1.0.0",
+    "mongoose": "^7.6.3",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3",
+    "redis": "^4.6.10",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.0",
+    "@semantic-release/release-notes-generator": "^12.0.0",
+    "@types/debug": "^4.1.10",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "bun-types": "latest",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "semantic-release": "^22.0.5",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "**/*.{ts,cts}": [
+      "eslint --fix"
+    ],
+    "**/*.{md,ts,cts,json}": [
+      "prettier --write"
+    ]
+  }
+}

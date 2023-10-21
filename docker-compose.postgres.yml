@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: .
+      target: development
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - node-modules:/app/node_modules
+    environment:
+      SERVER_PORT: "3000"
+      TIMEZONE: UTC
+      JOB_STORE_SOURCE: postgres
+      JOB_STORE_URL: postgres://postgres:postgres@postgres:5432/postgres
+      DEBUG: cronyx:*
+    command: bun run dev
+    restart: always
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+volumes:
+  node-modules: {}

@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: .
+      target: development
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - node-modules:/app/node_modules
+    environment:
+      SERVER_PORT: "3000"
+      TIMEZONE: UTC
+      JOB_STORE_SOURCE: mongodb
+      JOB_STORE_URL: mongodb://mongodb:27017/test
+      DEBUG: cronyx:*
+    command: bun run dev
+    restart: always
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    restart: always
+
+volumes:
+  node-modules: {}

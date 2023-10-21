@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: .
+      target: development
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - node-modules:/app/node_modules
+    environment:
+      SERVER_PORT: "3000"
+      TIMEZONE: UTC
+      JOB_STORE_SOURCE: redis
+      JOB_STORE_URL: redis://redis:6379
+      DEBUG: cronyx:*
+    command: bun run dev
+    restart: always
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    restart: always
+
+volumes:
+  node-modules: {}
