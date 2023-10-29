@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/yujiosaka/CronyxServer/compare/v1.0.0...v1.0.1) (2023-10-29)
+
+
+### Bug Fixes
+
+* fix a bug of npx command not working ([b754ded](https://github.com/yujiosaka/CronyxServer/commit/b754ded7a3ad570e4fed5fc190c5c3c8600f1cc2))
+
 # 1.0.0 (2023-10-28)
 
 
