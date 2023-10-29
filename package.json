@@ -24,6 +24,8 @@
     "url": "git+https://github.com/yujiosaka/CronyxServer.git"
   },
   "keywords": [
+    "bun",
+    "elysia",
     "cron",
     "crontab",
     "cronjob",
@@ -31,11 +33,9 @@
     "job-scheduler",
     "task-scheduler",
     "mongodb",
-    "redis",
     "mysql",
-    "postgres",
-    "bun",
-    "elysia"
+    "redis",
+    "postgres"
   ],
   "author": "Yuji Isobe",
   "license": "MIT",
@@ -48,10 +48,10 @@
   ],
   "dependencies": {
     "@eelkevdbos/elysia-basic-auth": "^1.4.0",
-    "cronyx": "^2.4.1",
+    "cronyx": "^3.0.1",
     "debug": "^4.3.4",
     "elysia": "^0.7.21",
-    "elysia-cronyx": "^1.0.0",
+    "elysia-cronyx": "^1.2.0",
     "mongoose": "^7.6.3",
     "mysql": "^2.18.1",
     "pg": "^8.11.3",
