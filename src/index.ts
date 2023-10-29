@@ -15,7 +15,7 @@ import { CronyxServerError } from "./error";
 import Source from "./source";
 import { log, parseOptions, parseSource } from "./util";
 
-const app = new Elysia({ name: "cronyx-server" })
+const app = new Elysia()
   .onAfterHandle(({ request }) => {
     log(`${request.method} ${new URL(request.url).pathname}`);
   })

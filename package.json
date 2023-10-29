@@ -7,11 +7,11 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "bin": {
-    "cronyx-server": "./dist/server.js"
+    "cronyx-server": "./dist/bin/cronyx-server.js"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "dev": "bun --watch src/server.ts",
+    "dev": "bun --watch src/index.ts",
     "format": "prettier **/*.{md,ts,cts,json} -w",
     "format:check": "prettier **/*.{md,ts,cts,json} --check",
     "lint": "eslint **/*.{ts,cts} --quiet",
