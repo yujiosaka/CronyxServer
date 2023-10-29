@@ -9,14 +9,14 @@ WORKDIR /app
 # Install Git
 RUN apt-get update && apt-get install -y curl git
 
+COPY package.json bun.lockb ./
+
+# Install dependencies
+RUN bun install
+
 # Initialize an empty Git repository
 # for preventing Husky install to fail
 RUN git init
-
-COPY package.json bun.lockb ./
-
-# Install dependencies (Temporarily ignoring scripts to avoid Husky install error)
-RUN bun install --ignore-scripts
 
 COPY . .
 
