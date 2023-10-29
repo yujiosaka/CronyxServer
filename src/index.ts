@@ -49,20 +49,26 @@ const app = new Elysia()
         break;
       case Source.MySQL:
         if (!url && !options) throw new CronyxServerError("Either URL or options is required for MySQL");
-        jobStore = await MysqlJobStore.connect((options || { url, type: "mysql" }) as MysqlConnectionOptions);
+        jobStore = await MysqlJobStore.connect(
+          (options || { url, type: "mysql", synchronize: true }) as MysqlConnectionOptions,
+        );
         break;
       case Source.AuroraMySQL:
         if (!url && !options) throw new CronyxServerError("Either URL or options is required for Aurora MySQL");
-        jobStore = await MysqlJobStore.connect((options || { url, type: "aurora-mysql" }) as AuroraMysqlConnectionOptions);
+        jobStore = await MysqlJobStore.connect(
+          (options || { url, type: "aurora-mysql", synchronize: true }) as AuroraMysqlConnectionOptions,
+        );
         break;
       case Source.Postgres:
         if (!url && !options) throw new CronyxServerError("Either URL or options is required for Postgres");
-        jobStore = await PostgresJobStore.connect((options || { url, type: "postgres" }) as PostgresConnectionOptions);
+        jobStore = await PostgresJobStore.connect(
+          (options || { url, type: "postgres", synchronize: true }) as PostgresConnectionOptions,
+        );
         break;
       case Source.AuroraPostgres:
         if (!url && !options) throw new CronyxServerError("Either URL or options is required for Aurora Postgres");
         jobStore = await PostgresJobStore.connect(
-          (options || { url, type: "aurora-postgres" }) as AuroraPostgresConnectionOptions,
+          (options || { url, type: "aurora-postgres", synchronize: true }) as AuroraPostgresConnectionOptions,
         );
         break;
     }
