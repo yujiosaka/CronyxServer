@@ -75,7 +75,7 @@ BASIC_AUTH_PASSWORD=
 
 ##### MongoDB
 
-When using MongoDB, `JOB_STORE_OPTIONS` expects options compatible with the [MongoClientOptions](https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/connection-options/) parameter.
+When using MongoDB, `JOB_STORE_OPTIONS` expects options compatible with the [ConnectOptions](https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/connection-options/) parameter.
 
 **Example:**
 
@@ -214,7 +214,7 @@ Replace `mongodb` with `redis`, `mysql`, or `postgres` depending on which one yo
 
 Docker images for this project are available in the [Docker Hub repository](https://hub.docker.com/r/yujiosaka/cronyx-server). You can find suitable images for different versions or tags of the CronyxServer application.
 
-## Debugging tips
+## 🐞 Debugging tips
 
 ### Enable debug logging
 

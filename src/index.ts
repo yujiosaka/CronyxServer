@@ -3,8 +3,7 @@ import type { BaseJobStore } from "cronyx";
 import { MongodbJobStore, MysqlJobStore, PostgresJobStore, RedisJobStore } from "cronyx";
 import Elysia from "elysia";
 import cronyx from "elysia-cronyx";
-import type { MongoClientOptions } from "mongodb";
-import type { Types } from "mongoose";
+import type { ConnectOptions, Types } from "mongoose";
 import type { RedisClientOptions } from "redis";
 import { AuroraMysqlConnectionOptions } from "typeorm/driver/aurora-mysql/AuroraMysqlConnectionOptions.js";
 import { AuroraPostgresConnectionOptions } from "typeorm/driver/aurora-postgres/AuroraPostgresConnectionOptions.js";
@@ -42,7 +41,7 @@ const app = new Elysia()
     switch (source) {
       case Source.MongoDB:
         if (!url) throw new CronyxServerError("URL is required for MongoDB");
-        jobStore = await MongodbJobStore.connect(url!, options as MongoClientOptions | undefined);
+        jobStore = await MongodbJobStore.connect(url!, options as ConnectOptions | undefined);
         break;
       case Source.Redis:
         if (!url && !options) throw new CronyxServerError("Either URL or options is required for Redis");
