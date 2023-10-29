@@ -1,6 +1,6 @@
 {
   "name": "cronyx-server",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "HTTP server for Cronyx, enabling seamless job scheduling across services via RESTful endpoints.",
   "type": "module",
   "module": "dist/index.ts",

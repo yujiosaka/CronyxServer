@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/yujiosaka/CronyxServer/compare/v1.1.0...v1.1.1) (2023-10-29)
+
+
+### Bug Fixes
+
+* fix a bug of docker image not being published ([8931f9b](https://github.com/yujiosaka/CronyxServer/commit/8931f9b0828a5773d6d952b734f7b91cc5ce5709))
+
 # [1.1.0](https://github.com/yujiosaka/CronyxServer/compare/v1.0.1...v1.1.0) (2023-10-29)
 
 
