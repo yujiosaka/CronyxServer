@@ -41,4 +41,4 @@ COPY --from=development /app/package.json /app/bun.lockb ./
 RUN bun install --production --ignore-scripts
 
 # Start the server
-CMD ["bun", "dist/server.js"]
+CMD ["bun", "dist/index.js"]
