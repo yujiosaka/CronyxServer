@@ -48,10 +48,10 @@
   ],
   "dependencies": {
     "@eelkevdbos/elysia-basic-auth": "^1.4.0",
-    "cronyx": "^3.0.1",
+    "cronyx": "^3.0.2",
     "debug": "^4.3.4",
     "elysia": "^0.7.21",
-    "elysia-cronyx": "^1.2.0",
+    "elysia-cronyx": "^1.2.2",
     "mongoose": "^7.6.3",
     "mysql": "^2.18.1",
     "pg": "^8.11.3",
