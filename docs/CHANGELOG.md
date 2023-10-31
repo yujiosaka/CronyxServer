@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/yujiosaka/CronyxServer/compare/v1.1.2...v1.1.3) (2023-10-31)
+
+
+### Bug Fixes
+
+* bump cronyx version to fix a bug ([62563b2](https://github.com/yujiosaka/CronyxServer/commit/62563b2aadb70cebe44ea5e770f02651887244bf))
+
 ## [1.1.2](https://github.com/yujiosaka/CronyxServer/compare/v1.1.1...v1.1.2) (2023-10-30)
 
 
