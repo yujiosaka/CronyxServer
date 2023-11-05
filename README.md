@@ -4,6 +4,15 @@
 
 HTTP server for [Cronyx](https://github.com/yujiosaka/Cronyx), enabling seamless job scheduling across services via RESTful endpoints.
 
+## 🧩 CronyxClient
+
+To simplify integration with CronyxServer, we provide client libraries for both TypeScript and Python.
+
+- **[CronyxClient.js](https://github.com/yujiosaka/CronyxClient.js)**: Integrate CronyxServer seamlessly into your TypeScript projects.
+- **[CronyxClient.py](https://github.com/yujiosaka/CronyxClient.py)**: Python projects can also tap into the power of CronyxServer with ease.
+
+These client libraries offer a seamless way to connect with CronyxServer, ensuring the feel of the [original Cronyx API](https://github.com/yujiosaka/Cronyx/blob/main/docs/API.md) is preserved.
+
 ## 🌟 Features
 
 <img src="https://github.com/yujiosaka/CronyxServer/assets/2261067/e7fbfaa7-204f-400c-8850-31a483d14ffc" alt="icon" width="300" align="right">
